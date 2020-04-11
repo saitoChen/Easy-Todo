@@ -1,0 +1,44 @@
+{
+  "id": "1701820",
+  "name": "easy-todo",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "electron project icons",
+  "glyphs": [
+    {
+      "icon_id": "13991783",
+      "name": "delete",
+      "font_class": "cc-delete",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "13940877",
+      "name": "shrink",
+      "font_class": "shrink",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "13940874",
+      "name": "close",
+      "font_class": "close",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "13940873",
+      "name": "Removefixed",
+      "font_class": "Removefixed",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "13576949",
+      "name": "add",
+      "font_class": "add",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}
