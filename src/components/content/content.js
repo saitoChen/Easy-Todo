@@ -20,12 +20,21 @@ export default (props) => {
 
   function mouseover(index){
     let curItems = document.querySelector(`#delete-${index}`)
-    curItems.style.display = 'block'
+    let backUpitems = document.querySelector(`#backUp-${index}`)
+    if (todoList[index]['checked']) {
+      curItems.style.display = 'none'
+      backUpitems.style.display = 'block'
+    } else {
+      curItems.style.display = 'block'
+      backUpitems.style.display = 'none'
+    }
   }
 
   function mouseout(index) {
     let curItems = document.querySelector(`#delete-${index}`)
+    let backUpitems = document.querySelector(`#backUp-${index}`)
     curItems.style.display = 'none'
+    backUpitems.style.display = 'none'
   }
 
 
@@ -33,6 +42,11 @@ export default (props) => {
     props.deleteTodo(index)
   }
 
+  function backSpaceItems(index) {
+    todoList[index]['checked'] = false
+    document.querySelector(`#todoItems-${index}`).classList.remove(`${Style['line']}`)
+    props.changeState(index, false)
+  }
 
   const listDom = todoList.map((item, index) => {
     return (
@@ -45,6 +59,7 @@ export default (props) => {
         </div>
         <div className={`${Style.listDelete}`}>
           <i id={`delete-${index}`} className={`iconfont icon-cc-delete ${Style.iconDelete}`} onClick={deleteItems.bind(this, index)} />
+          <i id={`backUp-${index}`} className={`iconfont icon-backup ${Style.iconBackUp}`} onClick={backSpaceItems.bind(this, index)} />
         </div>
       </li>
     )

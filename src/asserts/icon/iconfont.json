@@ -6,6 +6,13 @@
   "description": "electron project icons",
   "glyphs": [
     {
+      "icon_id": "14049374",
+      "name": "backup",
+      "font_class": "backup",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
       "icon_id": "13991783",
       "name": "delete",
       "font_class": "cc-delete",

@@ -9,6 +9,7 @@ export default ( {checked, changeState, index} ) => {
 
   function animate() {
     if (!checked) {
+      console.log(123)
       circleRef.current.classList.add(`${Style['on-circle']}`)
       tickRef.current.classList.add(`${Style['on-tick']}`)
       changeState(true)
