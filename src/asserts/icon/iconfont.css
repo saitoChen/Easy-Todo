@@ -1,0 +1,37 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1586425003197'); /* IE9 */
+  src: url('iconfont.eot?t=1586425003197#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAQQAAsAAAAACMQAAAPDAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKAqEWINpATYCJAMYCw4ABCAFhG0HWBt/B1GUzc0W2Q9JkoCIcA4zFFxKtBYyIYAqQAFgAAAgHv7bL73vz3xYSonZoYpaV0BZ342saiXQ8dXRMa7kkDTu/621OcUsQRo0nUfErNmy+2fX55gdrIl1XhdLYhXPllUaDTIT63wA2zLS+lIB2JbZVKH67zw45d0OjpkurcHygOaUEdQ4nY0HNLCI/ih7wW98wRfxV1CvmVgOwKX9BNoW8nEcr23uRrEyOiwQ11VZQLE1jTySHxqh6pmbI+4oNcWt4gq30/ePr7ZGQ6FM6NizF2skVP4h7rvnGgwn9RUCdz8TrEUkrIdkot9rGeXKI+u5tIOI21roXt2CD73/IR9ainNbEe1fXpYUgqjQ3C44iWjJh5bglNI2VDKkHagkSLtQKSDtgfcYimrHPm2M4xmKW85aCfZ3u0sTu3mqe2GtE7u281cuUEydpaf1wa1HUeDxEWWMWwCgls7UpWnk8I7w9hdE6Z09mKlqz0qyCq2fBuyxANNdUgnrqKMnW2V352Bxb+SnENrp3cqdKonkZkFnLZVYG9b2eNLTqe3SzdV0LtkGm6lGMlUZsisfBGcexVghOGGdHAKKfZiByBVcrBmEIKIndINPv0pGnCey/2S1xStf0ULXt87qmI37K/c3xqze7/X89NhKK7ISK1uzlg/uL+ow5qrXvQ+qE9/qT5rcPF6JC4afMu9fjT2Z0pe5OeV4csxMNDDj3s0JA4ZHr19f5syXHr+mouMMdVk4noT/3uRC+0K/93+3vu8dCUt3H423ahdX3v76i/86fbwmEXX3C8cJ7CwaO3HPZegGhOFFWkllCJEGcQ5pnfOpHbtJhyny+3/HhrHdgYGU4r+mk8GrcXYrnTOczJ40QKNgNvdnp2QPKH7Ih7bKfoWQlmmRQKX/ttAF29YPEXVM9byXYsZbjIXGjBIKtQWmpAm5QGbseih1bIdK4xC0rVO3uGMaxiVyC2vNEQiT7UFhxAQkk10jM/YJSjP9QGVyJGgbjYw1O1bGlfgqBgIHCQ9NYFWkFuF6Hp/ld4I8Ygisyk8pvcBs1Y/DgVAzXgcWsD0m2KNyhHOCCaMmriWHgWFQHGVUA5EHFM6jhcEg6XuhgEhNFO8YBgg4IMGGTMBUIspCVHMuvvX2nYBshEHARmoGzL0AY1Pbx8ICQjOQdRJrVs273MU2ShbBcQRGMJQJqyUmYLAIhUX7e2mAiAtQVoSiCgW1emSuJHC+zHzLLdBGX6uKIlLkKKOKWuuc6JfAAA5eW2GqpXtEg9qQ0AkmHQWijoPkEiQJIQA=') format('woff2'),
+  url('iconfont.woff?t=1586425003197') format('woff'),
+  url('iconfont.ttf?t=1586425003197') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1586425003197#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cc-delete:before {
+  content: "\e60d";
+}
+
+.icon-shrink:before {
+  content: "\e60c";
+}
+
+.icon-close:before {
+  content: "\e60b";
+}
+
+.icon-Removefixed:before {
+  content: "\e60a";
+}
+
+.icon-add:before {
+  content: "\e609";
+}
+

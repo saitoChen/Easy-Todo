@@ -1,0 +1,17 @@
+.headerWrapper {
+  padding-top:40px;
+  color: aliceblue;
+}
+
+.title {
+  font-size: 46px;
+}
+
+.time  {
+  margin-top:6 px;
+  font-size:24px;
+}
+
+.baseTodoWrapper {
+  margin-top: 50px;
+}

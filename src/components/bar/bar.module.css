@@ -1,0 +1,49 @@
+.barWrapper {
+  height: 100%;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.barLogo {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.lefBar {
+  display: flex;
+  align-items: center;
+}
+
+.mouse-event {
+  -webkit-app-region: no-drag;
+}
+
+.title{
+  cursor: default;
+  color: #707070;
+}
+
+.rightBar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 75px;
+}
+
+.icon-bar {
+  font-size: 12px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.icon-bar:hover {
+  color: #62dca5;
+}
+
+.icon-danger:hover {
+  color: #d81e06;
+}

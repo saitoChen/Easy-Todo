@@ -1,0 +1,52 @@
+.circleBg {
+  cursor: pointer;
+}
+
+.circle {
+  stroke-dasharray: 63;
+  stroke-dashoffset: 63;
+}
+
+.circle-checked {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.on-circle {
+  animation: circle .3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+.tick {
+  stroke-dasharray: 18;
+  stroke-dashoffset: 18;
+}
+
+.tick-checked {
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+}
+
+.on-tick {
+  animation: tick .5s ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+@keyframes tick {
+  from {
+    stroke-dashoffset: 18;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle {
+  from {
+    stroke-dashoffset: 63;
+  }
+  to {
+    stroke-dashoffset: 126;
+  }
+}
