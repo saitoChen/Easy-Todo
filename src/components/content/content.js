@@ -6,7 +6,6 @@ import Tick from '../base/tick'
 export default (props) => {
 
   const [todoList, setTodoList] = useState(props.list)
-
   useEffect(() => {
     setTodoList(props.list)
   }, [props.list])

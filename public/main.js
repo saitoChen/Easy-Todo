@@ -14,7 +14,6 @@ function createWindow() {
     height:752,
     useContentSize: true,
     frame: false,
-    icon: "./favicon.ico",
     webPreferences: {
       nodeIntegration: true
     }
@@ -29,7 +28,6 @@ function createWindow() {
   if (isDev) {
     mainWindow.webContents.openDevTools()
   }
-
 }
 
 app.on('ready', createWindow)
