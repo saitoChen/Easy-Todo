@@ -1,18 +1,13 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Style from './content.module.css'
 import { Scrollbars } from 'react-custom-scrollbars';
 import Tick from '../base/tick'
 
 export default (props) => {
 
-  const [todoList, setTodoList] = useState(props.list)
-  useEffect(() => {
-    setTodoList(props.list)
-  }, [props.list])
-
+  // change todoList checked status
   function changeState(index){
     return function(checkedState){
-      todoList[index]['checked'] = checkedState
       document.querySelector(`#todoItems-${index}`).classList.add(`${Style['line']}`)
       props.changeState(index, checkedState)
     }
@@ -21,7 +16,7 @@ export default (props) => {
   function mouseover(index){
     let curItems = document.querySelector(`#delete-${index}`)
     let backUpitems = document.querySelector(`#backUp-${index}`)
-    if (todoList[index]['checked']) {
+    if (props.list[index]['checked']) {
       curItems.style.display = 'none'
       backUpitems.style.display = 'block'
     } else {
@@ -43,12 +38,12 @@ export default (props) => {
   }
 
   function backSpaceItems(index) {
-    todoList[index]['checked'] = false
+    props.list[index]['checked'] = false
     document.querySelector(`#todoItems-${index}`).classList.remove(`${Style['line']}`)
     props.changeState(index, false)
   }
 
-  const listDom = todoList.map((item, index) => {
+  const listDom = props.list.map((item, index) => {
     return (
       <li key={index} className={Style.listItemWrapper} onMouseOver={ mouseover.bind(this, index) } onMouseOut={ mouseout.bind(this, index) }>
         <div className={Style.tickWrapper}>

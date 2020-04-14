@@ -1,4 +1,4 @@
-export default function(){
+export function timeStamp(){
   
   const date = new Date()
   const month = formateDate(date.getMonth() + 1)
@@ -22,4 +22,10 @@ const EnTime2CnTime = {
   '5': '五',
   '6': '六',
   '0': '日',
+}
+
+export function timeCondition(time){
+  let condition = false
+  condition = time.getHours() === 18 && time.getMinutes() === 44 && time.getSeconds() === 10
+  return condition
 }

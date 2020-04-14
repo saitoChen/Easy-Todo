@@ -5,12 +5,15 @@ import TodoHeader from './components/header/header'
 import ContentList from './components/content/content'
 import TodoFooter from './components/footer/footer'
 import picJson from './asserts/image/pic.json'
+import {timeCondition} from '../src/utils/moment'
+import {notificate} from '../src/utils/notification'
 const Store = window.require('electron-store')
 const store = new Store()
 
 function App() {
   let storeTodoList = store.get('todoList') || []
   const [todoList, setTodoList] = useState(storeTodoList)
+
   const bgRef = useRef()
   const contentRef = useRef()
   const picList = picJson.pic
@@ -27,6 +30,32 @@ function App() {
     if (todoList.length > 0) isContentSectionShow(true)
   }, [todoList.length])
 
+  // set store pending todoList
+  useEffect(() => {
+    console.log(todoList)
+    let timer = setInterval(() => {
+      let now = new Date()
+      let arr = []
+      // it's 0：00 o'clock
+      if (timeCondition(now)) {
+        todoList.forEach((item,index,list) => {
+          item.isToday = false
+          if (!item.checked) {
+            arr.push(item)
+          }
+        })
+        if (arr.length > 0) {
+          notificate()
+        }
+        setTodoList(arr)
+        setTodoInStore(arr)
+      }
+    }, 1000)
+
+    return () => clearInterval(timer)
+
+  }, [todoList])
+
   function setTodoInStore(todoList){
     store.set('todoList', todoList)
   }
@@ -34,7 +63,7 @@ function App() {
   // add todoList items
   function addTodo(items){
     let arr = [...todoList]
-    arr.unshift({value: items, checked: false})
+    arr.unshift({value: items, checked: false, isToday: true})
     isContentSectionShow(true)
     setTodoList(arr)
     setTodoInStore(arr)

@@ -16,6 +16,11 @@
   height: 272px;
   overflow: hidden;
 }
+
+.todoList {
+  overflow: hidden;
+}
+
 .listItemWrapper {
   position: relative;
   display: flex;
@@ -71,4 +76,3 @@
   color: #757575;
   cursor: pointer;
 }
-
