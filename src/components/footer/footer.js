@@ -1,6 +1,12 @@
 import React from 'react'
 import Style from './footer.module.css'
+const {shell} = window.require('electron').remote
 
 export default ({info}) => {
-  return <div className={Style.footerWrapper}><a className={Style.address} href={info.address}>{info.description}</a></div>
+  
+  function toAddress(){
+    shell.openExternal(info.address)
+  }
+
+  return <div className={Style.footerWrapper}><span className={Style.address} onClick={toAddress}>{info.description}</span></div>
 }
