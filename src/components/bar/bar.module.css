@@ -36,8 +36,16 @@
 
 .icon-bar {
   font-size: 12px;
-  cursor: pointer;
   color: #707070;
+}
+
+.closeWrapper, .minWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 }
 
 .icon-bar:hover {

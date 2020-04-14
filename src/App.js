@@ -17,7 +17,7 @@ function App() {
   const bgRef = useRef()
   const contentRef = useRef()
   const picList = picJson.pic
-  const currentBg = picList[0]
+  const currentBg = picList[Math.floor((Math.random()*picList.length))]
 
   useEffect(() => {
     // render background image

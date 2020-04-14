@@ -16,8 +16,12 @@ export default () => {
         <span className={Style.title}>Easy-todo</span>
       </div>
       <div className={Style.rightBar}>
-        <i className={`iconfont icon-close ${Style['icon-bar']} ${Style['icon-danger']} ${Style['mouse-event']}`} onClick={handleMessage.bind(this, 'close')} />
-        <i className={`iconfont icon-shrink ${Style['icon-bar']} ${Style['mouse-event']}`} onClick={handleMessage.bind(this, 'min')} />
+        <div className={Style.closeWrapper} onClick={handleMessage.bind(this, 'close')}>
+          <i className={`iconfont icon-close ${Style['icon-bar']} ${Style['icon-danger']} ${Style['mouse-event']}`} />
+        </div>
+        <div className={Style.minWrapper} onClick={handleMessage.bind(this, 'min')}>
+          <i className={`iconfont icon-shrink ${Style['icon-bar']} ${Style['mouse-event']}`} />
+        </div>
       </div>
     </div>
   )

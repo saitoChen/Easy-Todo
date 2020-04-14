@@ -26,6 +26,6 @@ const EnTime2CnTime = {
 
 export function timeCondition(time){
   let condition = false
-  condition = time.getHours() === 18 && time.getMinutes() === 44 && time.getSeconds() === 10
+  condition = time.getHours() === 0 && time.getMinutes() === 0 && time.getSeconds() === 0
   return condition
 }

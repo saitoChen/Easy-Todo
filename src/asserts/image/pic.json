@@ -6,6 +6,41 @@
       "name": "bg1",
       "description": "Phtot by Daniel Handl on Pexels",
       "address": "https://www.pexels.com/photo/snow-covered-mountain-under-blue-sky-3853501/"
+    },
+    {
+      "imgs": "./bg2.jpg",
+      "author": "cody lannom",
+      "name": "bg2",
+      "description": "Photo by cody lannom on Unsplash",
+      "address": "https://unsplash.com/photos/aeYQSnN4dOo"
+    },
+    {
+      "imgs": "./bg3.jpg",
+      "author": "Mae Mu",
+      "name": "bg3",
+      "description": "Photo by Mae Mu on Unsplash",
+      "address": "https://unsplash.com/photos/s6S8IgEN6-4"
+    },
+    {
+      "imgs": "./bg4.jpg",
+      "author": "Isaac Quesada",
+      "name": "bg4",
+      "description": "Photo by Isaac Quesada on Unsplash",
+      "address": "https://unsplash.com/photos/yedZbD3NHrs"
+    },
+    {
+      "imgs": "./bg5.jpg",
+      "author": "Sean Foley",
+      "name": "bg5",
+      "description": "Photo by Sean Foley on Unsplash",
+      "address": "https://unsplash.com/photos/qEWEz-U5p8Q"
+    },
+    {
+      "imgs": "./bg6.jpg",
+      "author": "Jason Zhao",
+      "name": "bg6",
+      "description": "Photo by Jason Zhao on Unsplash",
+      "address": "https://unsplash.com/photos/T54YIVm2tWI"
     }
   ]
 }
