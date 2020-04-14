@@ -10,20 +10,21 @@ import {notificate} from '../src/utils/notification'
 const Store = window.require('electron-store')
 const store = new Store()
 
+const picList = picJson.pic
+const currentBg = picList[Math.floor((Math.random()*picList.length))]
+
 function App() {
   let storeTodoList = store.get('todoList') || []
   const [todoList, setTodoList] = useState(storeTodoList)
 
   const bgRef = useRef()
   const contentRef = useRef()
-  const picList = picJson.pic
-  const currentBg = picList[Math.floor((Math.random()*picList.length))]
 
   useEffect(() => {
     // render background image
     bgRef.current.classList.add(`${Style[currentBg['name']]}`)
 
-  }, [picList, currentBg])
+  }, [])
 
   useEffect(() => {
     // render init todoList from store
@@ -32,7 +33,6 @@ function App() {
 
   // set store pending todoList
   useEffect(() => {
-    console.log(todoList)
     let timer = setInterval(() => {
       let now = new Date()
       let arr = []
