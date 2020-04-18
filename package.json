@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "electron .",
-    "electron-pack": "electron-packager . --platform=win32 --arch=x64 --icon='./assets/win/logo.ico' --electron-version='8.2.1' --overwrite --asar --out='../../release' "
+    "electron-pack": "electron-packager . --platform=win32 --arch=x64 --icon='./assets/win/logo.ico' --electron-version='8.2.1' --overwrite --asar --prune --out='../../release' "
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -36,13 +36,13 @@
     ]
   },
   "devDependencies": {
-    "asar": "^3.0.3",
     "electron": "^8.2.1",
     "electron-builder": "^22.4.1",
     "electron-packager": "^14.2.1",
     "react": "^16.13.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "asar": "^3.0.3"
   }
 }

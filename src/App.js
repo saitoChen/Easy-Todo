@@ -22,7 +22,6 @@ function App() {
   const contentRef = useRef()
 
   const currentTime = getNowDate()
-
   deleteUncheckedList()
 
   useEffect(() => {
@@ -62,7 +61,7 @@ function App() {
   }, [todoList])
 
   function storeTimeIsToday(){
-    return lastTime.year === currentTime.year && lastTime.month === currentTime.month && lastTime.day === currentTime.day
+    return lastTime.year === currentTime.year && lastTime.month === currentTime.month && lastTime.date === currentTime.date
   }
 
   function setTodoInStore(todoList){
@@ -83,8 +82,8 @@ function App() {
       }
       setTodoList(arr)
       setTodoInStore(arr)
-      store.set('lastTime', currentTime)
     }
+    store.set('lastTime', currentTime)
   }
 
   // add todoList items
