@@ -24,8 +24,18 @@ const EnTime2CnTime = {
   '0': '日',
 }
 
+
+export function getNowDate(){
+  const date = new Date()
+  return {
+    year: date.getFullYear(),
+    month: date.getMonth() + 1,
+    date: date.getDate()
+  }
+}
+
 export function timeCondition(time){
   let condition = false
-  condition = time.getHours() === 0 && time.getMinutes() === 0 && time.getSeconds() === 0
+  condition = time.getHours() === 0 && time.getMinutes() === 43 && time.getSeconds() === 0
   return condition
 }

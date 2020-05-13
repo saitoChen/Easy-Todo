@@ -5,7 +5,7 @@ import TodoHeader from './components/header/header'
 import ContentList from './components/content/content'
 import TodoFooter from './components/footer/footer'
 import picJson from './asserts/image/pic.json'
-import {timeCondition} from '../src/utils/moment'
+import {timeCondition, getNowDate} from '../src/utils/moment'
 import {notificate} from '../src/utils/notification'
 const Store = window.require('electron-store')
 const store = new Store()
@@ -14,11 +14,15 @@ const picList = picJson.pic
 const currentBg = picList[Math.floor((Math.random()*picList.length))]
 
 function App() {
-  let storeTodoList = store.get('todoList') || []
+  const storeTodoList = store.get('todoList') || []
+  const lastTime = store.get('lastTime') || getNowDate()
   const [todoList, setTodoList] = useState(storeTodoList)
 
   const bgRef = useRef()
   const contentRef = useRef()
+
+  const currentTime = getNowDate()
+  deleteUncheckedList()
 
   useEffect(() => {
     // render background image
@@ -35,9 +39,9 @@ function App() {
   useEffect(() => {
     let timer = setInterval(() => {
       let now = new Date()
-      let arr = []
       // it's 0：00 o'clock
       if (timeCondition(now)) {
+        let arr = []
         todoList.forEach((item,index,list) => {
           item.isToday = false
           if (!item.checked) {
@@ -56,8 +60,30 @@ function App() {
 
   }, [todoList])
 
+  function storeTimeIsToday(){
+    return lastTime.year === currentTime.year && lastTime.month === currentTime.month && lastTime.date === currentTime.date
+  }
+
   function setTodoInStore(todoList){
     store.set('todoList', todoList)
+  }
+
+  function deleteUncheckedList(){
+    if (!storeTimeIsToday()) {
+      let arr = []
+      todoList.forEach((item,index,list) => {
+        item.isToday = false
+        if (!item.checked) {
+          arr.push(item)
+        }
+      })
+      if (arr.length > 0) {
+        notificate()
+      }
+      setTodoList(arr)
+      setTodoInStore(arr)
+    }
+    store.set('lastTime', currentTime)
   }
 
   // add todoList items
